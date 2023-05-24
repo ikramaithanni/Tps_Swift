@@ -1,0 +1,182 @@
+import Foundation
+
+// exercice 1
+class Racine {
+    var x: Int
+    
+    init(x: Int) {
+        self.x = x
+    }
+    
+    func racineCarre() -> Int {
+        return x * x
+    }
+}
+
+// let racine = Racine(x: 2)
+// print(racine.racineCarre())
+
+
+//exercice 2
+
+class Rectongle{
+
+    var largeur: Double
+    var langeur: Double
+
+    init(largeur: Double,  langeur: Double){
+
+        self.largeur = largeur
+        self.langeur = langeur
+    }
+
+    func surface() -> Double{
+        return largeur * largeur
+    }
+
+    func perimetre() -> Double{ 
+        return (largeur + langeur) *  2
+    }
+
+
+
+}
+ 
+//  var rectongle = Rectongle(largeur:22.0 ,langeur: 12.0)
+//     print(rectongle.surface())
+//     print(rectongle.perimetre())
+
+
+
+//exercice 3
+class Stagiaire {
+    var nomStg: String
+    var prog: Double
+    var sys: Double
+    var res: Double
+    var ang: Double
+
+    init(nomStg: String, prog: Double, sys: Double, res: Double, ang: Double) {
+
+        self.nomStg = nomStg
+        self.prog = prog
+        self.sys = sys
+        self.res = res
+        self.ang = ang
+    }
+
+    func notes() -> String {
+        return "Le nom du stagiaire est : \(nomStg)\nLa note de programmation : \(prog)\nLa note de réseaux : \(res)\nLa note de système : \(sys)\nLa note d'anglais : \(ang)"
+    }
+
+    func somme() -> Double {
+        return prog + sys + res + ang
+    }
+
+    func moyenne() -> Double {
+        return somme()/4
+    }
+
+    func bultin(){
+        print(self.notes())
+        print("la somme est :\(self.somme())")
+        print("votre resulta est : \(self.moyenne())")
+    }
+}
+
+// let notestg = Stagiaire(nomStg: "Ahmadi Nourdin", prog: 12.34, sys: 13.00, res: 19.77, ang: 14.9)
+// print(notestg.notes())
+// print(notestg.somme())
+// print(notestg.moyenne())
+// notestg.bultin()
+
+
+
+//exercice 4
+
+class Compte{
+    var nom : String
+    var numero : String
+    var solde : Double 
+
+    init (nom : String, numero : String, solde : Double){
+        self.nom = nom
+        self.numero = numero
+        self.solde = solde
+    }
+
+    func versement(montVerser : Double) -> Double {
+        return solde + montVerser
+    }
+
+    func retrait(montRetirer : Double) -> Double {
+        return solde -  montRetirer
+    }
+
+      func agios() {
+        let agios = solde * 0.05
+        solde -= agios
+        print("Agios de \(agios) € appliqués au compte de \(nom). Nouveau solde : \(solde) €")
+    }
+    
+    func afficher(){
+        print("Numero de Compte :\(numero)\nNom :\(nom)")
+        print("Versement : \(self.versement(montVerser : 5000.0))")
+        print("Retrait : \(self.retrait(montRetirer :3000.0))")
+        print(self.agios())
+        print("votre solde : \(solde)")
+    }
+
+
+}
+
+// var compte = Compte(nom : "salma wazani", numero : "1234786", solde : 10000.0)
+// compte.afficher()
+
+
+
+
+// exercice 5
+
+class Cercle {
+
+    var a : Double
+    var b : Double
+    var r : Double
+    
+    init ( a : Double, b : Double, r : Double ){
+
+        self.a = a
+        self.b = b
+        self.r = r
+
+    }
+
+    func surface() -> Double {
+        return Double.pi * r * r
+    }
+
+     func perimetre() -> Double {
+        return Double.pi * r * 2
+    }
+    
+
+}
+
+// let cercle = Cercle(a : 2.0, b : 2.1, r : 2.5)
+// print(cercle.surface())
+// print(cercle.perimetre())
+
+
+
+
+
+
+
+
+
+
+
+
+
+

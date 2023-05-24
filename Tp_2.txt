@@ -1,0 +1,75 @@
+//exercice 1
+class Stagiaire {
+    var nom : String
+    var prenom : String 
+    var age : Int
+
+    init (nom : String, prenom : String, age : Int ){
+
+        self.nom = nom
+        self.prenom = prenom
+        self.age = age
+
+    }
+
+    func afficher() -> String {
+        return  "Je m’appelle[\(nom)\t\( prenom)], je suis âgé de [\(age)] ans."
+    }
+    
+}
+
+// var stg = Stagiaire(nom : "Louqlia" , prenom : "Mariam", age : 21)
+// print(stg.afficher())
+
+//exercice 2
+class Eleve {
+    var nom: String
+    var prenom: String
+    var tab: [Double]
+
+    init(nom: String, prenom: String, tab: [Double]) {
+        self.nom = nom
+        self.prenom = prenom
+        self.tab = tab
+    }
+
+    func moyenne() -> Double {
+        var somme = 0.0
+        for element in tab {
+            somme += element
+        }
+        return somme / Double(tab.count)
+    }
+}
+
+let eleve = Eleve(nom: "Dupont", prenom: "Jean", tab: [12.0, 13.5, 14.6])
+print("Moyenne de l'élève :", eleve.moyenne())
+
+//exercice 3
+
+class Employe{
+
+   var matricule: String
+    var nom: String
+    var prénom: String
+    var dateNaissance: Date
+    var dateEmbauche: Date
+    var salaire: Double
+    
+    init(matricule: String, nom: String, prénom: String, dateNaissance: Date, dateEmbauche: Date, salaire: Double) {
+        self.matricule = matricule
+        self.nom = nom
+        self.prénom = prénom
+        self.dateNaissance = dateNaissance
+        self.dateEmbauche = dateEmbauche
+        self.salaire = salaire
+    }
+  
+}
+
+
+
+
+
+
+
